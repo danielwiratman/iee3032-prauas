@@ -5,7 +5,8 @@ IEE3032 PraUAS. Creating a system with 27 sensors communicating through MQTT to 
 ---
 ### Dashboard
 ![image](https://github.com/danielwiratman/iee3032-prauas/assets/74503671/c3e99eab-2b8a-4587-b792-19eb49b342d7)
-![image](https://github.com/danielwiratman/iee3032-prauas/assets/74503671/dbca82bb-e11e-46f6-a3ed-31fa2036d00e)
+![image](https://github.com/danielwiratman/iee3032-prauas/assets/74503671/3a46b952-652a-477a-a703-96808a2ec1e0)
+
 
 
 ## Node-Red
