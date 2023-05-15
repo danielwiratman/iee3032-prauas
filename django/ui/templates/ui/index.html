@@ -22,6 +22,7 @@
                 <p><span id="subsistem1-kekentalansusu"></span> cP</p>
                 <p>Sensor Jumlah Kuning Telur</p>
                 <p><span id="subsistem1-jumlahkuningtelur"></span> butir</p>
+                
                 <h2>SUBSISTEM 2: Daging Merah</h2>
                 <p>Sensor Kemerahan Daging</p>
                 <p><span id="subsistem2-kemerahandaging"></span> a*</p>
@@ -29,6 +30,7 @@
                 <p><span id="subsistem2-kadarlemak"></span>%</p>
                 <p>Sensor Kadar Air</p>
                 <p><span id="subsistem2-kadarair"></span>%</p>
+                
                 <h2>SUBSISTEM 3: Daging Putih</h2>
                 <p>Sensor Microbacteria</p>
                 <p><span id="subsistem3-microbacteria"></span> mg/kg</p>
@@ -36,108 +38,89 @@
                 <p><span id="subsistem3-kadarprotein"></span>%</p>
                 <p>Sensor Keasaman Daging</p>
                 <p><span id="subsistem3-keasamandaging"></span> ph</p>
-                <h2>AKTUATOR: Sensor Okupansi</h2>
-                <p><span id="system1_hvac"></span></p>
             </div>
             <div class="box">
                 <h1>PABRIK 2: Smart Plantation</h1>
                 <h2>SUBSISTEM 1: Sumber Karbohidrat</h2>
-                <p>Sensor Kadar Protein Susu</p>
-                <p><span id="subsistem1-kadarproteinsusu"></span> g</p>
-                <p>Sensor Kekentalan Susu</p>
-                <p><span id="subsistem1-kekentalansusu"></span> cP</p>
-                <p>Sensor Jumlah Kuning Telur</p>
-                <p><span id="subsistem1-jumlahkuningtelur"></span> butir</p>
+                <p>Sensor Kekuningan Padi</p>
+                <p><span id="subsistem1-kekuninganpadi"></span> g</p>
+                <p>Sensor Kebulatan Padi</p>
+                <p><span id="subsistem1-kebulatanpadi"></span> cP</p>
+                <p>Sensor Kadar Karbohidrat</p>
+                <p><span id="subsistem1-kadarkarbohidrat"></span> butir</p>
+                
                 <h2>SUBSISTEM 2: Sayuran</h2>
-                <p>Sensor Kemerahan Daging</p>
-                <p><span id="subsistem2-kemerahandaging"></span> a*</p>
-                <p>Sensor Kadar Lemak</p>
-                <p><span id="subsistem2-kadarlemak"></span>%</p>
-                <p>Sensor Kadar Air</p>
-                <p><span id="subsistem2-kadarair"></span>%</p>
+                <p>Sensor Kehijauan</p>
+                <p><span id="subsistem2-kehijauan"></span> a*</p>
+                <p>Sensor Kadar Klorofil</p>
+                <p><span id="subsistem2-kadarklorofil"></span>%</p>
+                <p>Sensor Amonia</p>
+                <p><span id="subsistem2-amonia"></span>%</p>
+                
                 <h2>SUBSISTEM 3: Buah-Buahan</h2>
-                <p>Sensor Microbacteria</p>
-                <p><span id="subsistem3-microbacteria"></span> mg/kg</p>
-                <p>Sensor Kadar Protein</p>
-                <p><span id="subsistem3-kadarprotein"></span>%</p>
-                <p>Sensor Keasaman Daging</p>
-                <p><span id="subsistem3-keasamandaging"></span> ph</p>
-                <h2>AKTUATOR: Sensor Okupansi</h2>
+                <p>Sensor Etilen</p>
+                <p><span id="subsistem3-etilen"></span> mg/kg</p>
+                <p>Sensor Kadar Gula</p>
+                <p><span id="subsistem3-kadargula"></span>%</p>
+                <p>Sensor Kepadatan</p>
+                <p><span id="subsistem3-kepadatan"></span> ph</p>
             </div>
             <div class="box">
                 <h1>PABRIK 3: Smart Restaurant</h1>
                 <h2>SUBSISTEM 1: Deteksi Musim</h2>
-                <p><span id="system3_waterlevel"></span> mm</p>
+                <p>Sensor Suhu</p>
+                <p><span id="subsistem1-suhu"></span> g</p>
+                <p>Sensor Arah Angin</p>
+                <p><span id="subsistem1-arahangin"></span> cP</p>
+                <p>Sensor Curah Hujan</p>
+                <p><span id="subsistem1-curahhujan"></span> butir</p>
+                
                 <h2>SUBSISTEM 2: Deteksi Hasil Penjualan Berfluktuasi</h2>
-                <p><span id="system3_pressure"></span> Pa</p>
+                <p>Sensor Penghitung Kasir Idle</p>
+                <p><span id="subsistem2-kasiridle"></span> a*</p>
+                <p>Sensor Rate Penjualan</p>
+                <p><span id="subsistem2-ratepenjualan"></span>%</p>
+                <p>Sensor Jumlah Pembayaran</p>
+                <p><span id="subsistem2-jumlahpembayaran"></span>%</p>
+                
                 <h2>SUBSISTEM 3: Deteksi Jumlah Pengunjung Restoran</h2>
-                <p><span id="system3_temperature"></span>&deg;C</p>
-                <h2>AKTUATOR: Water Valve</h2>
-                <p><span id="system3_water_valve"></span></p>
+                <p>Sensor Penghitung Water Idle</p>
+                <p><span id="subsistem3-waiteridle"></span> mg/kg</p>
+                <p>Sensor Okupansi Restoran</p>
+                <p><span id="subsistem3-okupansirestoran"></span>%</p>
+                <p>Sensor Stok Piring</p>
+                <p><span id="subsistem3-stokpiring"></span> ph</p>
             </div>
         </div>
         <script>
-            function updateView(message) {
-                const system1_temperature = JSON.parse(
-                    message["system1_temperature"]
-                );
-                document.querySelector("#system1_temperature").innerHTML =
-                    system1_temperature[0].fields.value;
-
-                const system1_humidity = JSON.parse(
-                    message["system1_humidity"]
-                );
-                document.querySelector("#system1_humidity").innerHTML =
-                    system1_humidity[0].fields.value;
-
-                const system1_occupancy = JSON.parse(
-                    message["system1_occupancy"]
-                );
-                document.querySelector("#system1_occupancy").innerHTML =
-                    system1_occupancy[0].fields.value;
-
-                const system2_ph = JSON.parse(message["system2_ph"]);
-                document.querySelector("#system2_ph").innerHTML =
-                    system2_ph[0].fields.value;
-                const system2_turbiditas = JSON.parse(
-                    message["system2_turbiditas"]
-                );
-                document.querySelector("#system2_turbiditas").innerHTML =
-                    system2_turbiditas[0].fields.value;
-                const system2_konduktivitas = JSON.parse(
-                    message["system2_konduktivitas"]
-                );
-                document.querySelector("#system2_konduktivitas").innerHTML =
-                    system2_konduktivitas[0].fields.value;
-                const system3_waterlevel = JSON.parse(
-                    message["system3_waterlevel"]
-                );
-                document.querySelector("#system3_waterlevel").innerHTML =
-                    system3_waterlevel[0].fields.value;
-                const system3_pressure = JSON.parse(
-                    message["system3_pressure"]
-                );
-                document.querySelector("#system3_pressure").innerHTML =
-                    system3_pressure[0].fields.value;
-                const system3_temperature = JSON.parse(
-                    message["system3_temperature"]
-                );
-                document.querySelector("#system3_temperature").innerHTML =
-                    system3_temperature[0].fields.value;
-                const system1_hvac = message["system1_hvac"] ? "ON" : "OFF";
-                const system2_chemical_pump = message["system2_chemical_pump"]
-                    ? "ON"
-                    : "OFF";
-                const system3_water_valve = message["system3_water_valve"]
-                    ? "ON"
-                    : "OFF";
-
-                document.querySelector("#system1_hvac").innerHTML =
-                    system1_hvac;
-                document.querySelector("#system2_chemical_pump").innerHTML =
-                    system2_chemical_pump;
-                document.querySelector("#system3_water_valve").innerHTML =
-                    system3_water_valve;
+            function updateView(data) {
+              document.querySelector('#subsistem1-kadarproteinsusu').innerHTML = data.pabrik1.subsistem1.kadarproteinsusu;
+              document.querySelector('#subsistem1-kekentalansusu').innerHTML = data.pabrik1.subsistem1.kekentalansusu;
+              document.querySelector('#subsistem1-jumlahkuningtelur').innerHTML = data.pabrik1.subsistem1.jumlahkuningtelur;
+              document.querySelector('#subsistem1-kekuninganpadi').innerHTML = data.pabrik2.subsistem1.kekuninganpadi;
+              document.querySelector('#subsistem1-kebulatanpadi').innerHTML = data.pabrik2.subsistem1.kebulatanpadi;
+              document.querySelector('#subsistem1-kadarkarbohidrat').innerHTML = data.pabrik2.subsistem1.kadarkarbohidrat;
+              document.querySelector('#subsistem1-suhu').innerHTML = data.pabrik3.subsistem1.suhu;
+              document.querySelector('#subsistem1-arahangin').innerHTML = data.pabrik3.subsistem1.arahangin;
+              document.querySelector('#subsistem1-curahhujan').innerHTML = data.pabrik3.subsistem1.curahhujan;
+              document.querySelector('#subsistem2-kemerahandaging').innerHTML = data.pabrik1.subsistem2.kemerahandaging;
+              document.querySelector('#subsistem2-kadarlemak').innerHTML = data.pabrik1.subsistem2.kadarlemak;
+              document.querySelector('#subsistem2-kadarair').innerHTML = data.pabrik1.subsistem2.kadarair;
+              document.querySelector('#subsistem2-kehijauan').innerHTML = data.pabrik2.subsistem2.kehijauan;
+              document.querySelector('#subsistem2-kadarklorofil').innerHTML = data.pabrik2.subsistem2.kadarklorofil;
+              document.querySelector('#subsistem2-amonia').innerHTML = data.pabrik2.subsistem2.amonia;
+              document.querySelector('#subsistem2-kasiridle').innerHTML = data.pabrik3.subsistem2.kasiridle;
+              document.querySelector('#subsistem2-ratepenjualan').innerHTML = data.pabrik3.subsistem2.ratepenjualan;
+              document.querySelector('#subsistem2-jumlahpembayaran').innerHTML = data.pabrik3.subsistem2.jumlahpembayaran;
+              document.querySelector('#subsistem3-microbacteria').innerHTML = data.pabrik1.subsistem3.microbacteria;
+              document.querySelector('#subsistem3-kadarprotein').innerHTML = data.pabrik1.subsistem3.kadarprotein;
+              document.querySelector('#subsistem3-keasamandaging').innerHTML = data.pabrik1.subsistem3.keasamandaging;
+              document.querySelector('#subsistem3-etilen').innerHTML = data.pabrik2.subsistem3.etilen;
+              document.querySelector('#subsistem3-kadargula').innerHTML = data.pabrik2.subsistem3.kadargula;
+              document.querySelector('#subsistem3-kepadatan').innerHTML = data.pabrik2.subsistem3.kepadatan;
+              document.querySelector('#subsistem3-waiteridle').innerHTML = data.pabrik3.subsistem3.waiteridle;
+              document.querySelector('#subsistem3-okupansirestoran').innerHTML = data.pabrik3.subsistem3.okupansirestoran;
+              document.querySelector('#subsistem3-stokpiring').innerHTML = data.pabrik3.subsistem3.stokpiring;
             }
 
             function getData() {

@@ -35,12 +35,8 @@ h2.mainTitle {
   transition: all 400ms;
 }
 
-.box p {
-  
-}
-
 .box h1:first-child {
-  margin-bottom: 15px;;
+  margin-bottom: 15px;
 }
 
 .box h2 {
