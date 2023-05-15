@@ -1,0 +1,1907 @@
+[
+    {
+        "id": "03be9718700e9e93",
+        "type": "inject",
+        "z": "59c3cf3e48fd4ac7",
+        "name": "Setiap 1 detik",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 1420,
+        "wires": [
+            [
+                "6b461470a309dcae",
+                "717a1bdc6df9bd96",
+                "35e72c9191fa9944",
+                "4ae7f0da5fb2fdcc",
+                "96f93091867598f4",
+                "653b433624c0d2de",
+                "38d30cd42f828988",
+                "b92d0d0b8aa310c6",
+                "876fbd90464f9324",
+                "db4650491c6c0e19",
+                "2b84a5efc7e7bef3",
+                "363d57fbae88756f",
+                "f7bbab404e17a596",
+                "cf03d6b08f6fdaba",
+                "7edc15b246f4b5e8",
+                "4956d72e79267ce9",
+                "5ca8402d8ae22359",
+                "24b454fefa24a949",
+                "cc44642d5f0c81aa",
+                "f41f99b2d1093806",
+                "fd3424753ef7f9f5",
+                "8244fcae843e2579",
+                "fe052ee5546180d9",
+                "9524d43b4e81535a",
+                "5714faa2828faa97",
+                "f1358c83bac56a4d",
+                "c9bbe1d31efaf827"
+            ]
+        ]
+    },
+    {
+        "id": "6b461470a309dcae",
+        "type": "random",
+        "z": "59c3cf3e48fd4ac7",
+        "name": "Sensor Kadar Protein Susu (0-100 g)",
+        "low": "0",
+        "high": "100",
+        "inte": "false",
+        "property": "payload",
+        "x": 550,
+        "y": 260,
+        "wires": [
+            [
+                "e621ae5b2f9735f7",
+                "ddb296e00b84da67"
+            ]
+        ]
+    },
+    {
+        "id": "717a1bdc6df9bd96",
+        "type": "random",
+        "z": "59c3cf3e48fd4ac7",
+        "name": "Sensor Kekentalan Susu (0 - 10 cP)",
+        "low": "0",
+        "high": "10",
+        "inte": "false",
+        "property": "payload",
+        "x": 540,
+        "y": 340,
+        "wires": [
+            [
+                "75901c0c892d19a7",
+                "80108c78499dcdf2"
+            ]
+        ]
+    },
+    {
+        "id": "35e72c9191fa9944",
+        "type": "random",
+        "z": "59c3cf3e48fd4ac7",
+        "name": "Sensor Jumlah Kuning Telur (0 - 100 butir)",
+        "low": "0",
+        "high": "100",
+        "inte": "true",
+        "property": "payload",
+        "x": 560,
+        "y": 420,
+        "wires": [
+            [
+                "127a6667c25a7e7c",
+                "09ac40bb7d7a832b"
+            ]
+        ]
+    },
+    {
+        "id": "f2675d76ed13d2fc",
+        "type": "comment",
+        "z": "59c3cf3e48fd4ac7",
+        "name": "SUBSISTEM 1: Susu Hewani dan Telur",
+        "info": "",
+        "x": 550,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "e6d7bbd732d7d74d",
+        "type": "comment",
+        "z": "59c3cf3e48fd4ac7",
+        "name": "PABRIK 1: Smart Farm",
+        "info": "",
+        "x": 720,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "e621ae5b2f9735f7",
+        "type": "mqtt out",
+        "z": "59c3cf3e48fd4ac7",
+        "name": "",
+        "topic": "prauas/pabrik1/subsistem1/kadarproteinsusu",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "f83c5627801f002d",
+        "x": 1050,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "75901c0c892d19a7",
+        "type": "mqtt out",
+        "z": "59c3cf3e48fd4ac7",
+        "name": "",
+        "topic": "prauas/pabrik1/subsistem1/kekentalansusu",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "f83c5627801f002d",
+        "x": 1050,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "127a6667c25a7e7c",
+        "type": "mqtt out",
+        "z": "59c3cf3e48fd4ac7",
+        "name": "",
+        "topic": "prauas/pabrik1/subsistem1/jumlahkuningtelur",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "f83c5627801f002d",
+        "x": 1050,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "4ae7f0da5fb2fdcc",
+        "type": "random",
+        "z": "59c3cf3e48fd4ac7",
+        "name": "Sensor Kemerahan Daging (0-100 a*)",
+        "low": "0",
+        "high": "100",
+        "inte": "false",
+        "property": "payload",
+        "x": 550,
+        "y": 520,
+        "wires": [
+            [
+                "e2f5af135d096c88",
+                "fc8aaaa9c76cd140"
+            ]
+        ]
+    },
+    {
+        "id": "96f93091867598f4",
+        "type": "random",
+        "z": "59c3cf3e48fd4ac7",
+        "name": "Sensor Kadar Lemak (0 - 100%)",
+        "low": "0",
+        "high": "100",
+        "inte": "false",
+        "property": "payload",
+        "x": 530,
+        "y": 600,
+        "wires": [
+            [
+                "4f53e9d1355c4e35",
+                "118d3c1cf599ba6e"
+            ]
+        ]
+    },
+    {
+        "id": "653b433624c0d2de",
+        "type": "random",
+        "z": "59c3cf3e48fd4ac7",
+        "name": "Sensor Kadar Air (0 - 100%)",
+        "low": "0",
+        "high": "100",
+        "inte": "false",
+        "property": "payload",
+        "x": 520,
+        "y": 680,
+        "wires": [
+            [
+                "bebfbbb44e8e86b1",
+                "64294ed97d75c650"
+            ]
+        ]
+    },
+    {
+        "id": "960cf9385369fcb0",
+        "type": "comment",
+        "z": "59c3cf3e48fd4ac7",
+        "name": "SUBSISTEM 2: Daging Merah",
+        "info": "",
+        "x": 520,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "e2f5af135d096c88",
+        "type": "mqtt out",
+        "z": "59c3cf3e48fd4ac7",
+        "name": "",
+        "topic": "prauas/pabrik1/subsistem2/kemerahandaging",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "f83c5627801f002d",
+        "x": 1050,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "4f53e9d1355c4e35",
+        "type": "mqtt out",
+        "z": "59c3cf3e48fd4ac7",
+        "name": "",
+        "topic": "prauas/pabrik1/subsistem2/kadarlemak",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "f83c5627801f002d",
+        "x": 1040,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "bebfbbb44e8e86b1",
+        "type": "mqtt out",
+        "z": "59c3cf3e48fd4ac7",
+        "name": "",
+        "topic": "prauas/pabrik1/subsistem2/kadarair",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "f83c5627801f002d",
+        "x": 1020,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "38d30cd42f828988",
+        "type": "random",
+        "z": "59c3cf3e48fd4ac7",
+        "name": "Sensor Microbacteria (0 - 100 mg/kg)",
+        "low": "0",
+        "high": "100",
+        "inte": "false",
+        "property": "payload",
+        "x": 550,
+        "y": 780,
+        "wires": [
+            [
+                "ca6e92efa9cecbea",
+                "5adfcafb9769d98a"
+            ]
+        ]
+    },
+    {
+        "id": "b92d0d0b8aa310c6",
+        "type": "random",
+        "z": "59c3cf3e48fd4ac7",
+        "name": "Sensor Kadar Protein (0 - 100%)",
+        "low": "0",
+        "high": "100",
+        "inte": "false",
+        "property": "payload",
+        "x": 530,
+        "y": 860,
+        "wires": [
+            [
+                "cac6a7d919a53ea6",
+                "5e0a5b2b2c5032cb"
+            ]
+        ]
+    },
+    {
+        "id": "876fbd90464f9324",
+        "type": "random",
+        "z": "59c3cf3e48fd4ac7",
+        "name": "Sensor Keasaman Daging (0 - 14 ph)",
+        "low": "0",
+        "high": "14",
+        "inte": "false",
+        "property": "payload",
+        "x": 550,
+        "y": 940,
+        "wires": [
+            [
+                "6d0dadcb6efa8e06",
+                "db5bf1901dd639b3"
+            ]
+        ]
+    },
+    {
+        "id": "3368e752620c70b8",
+        "type": "comment",
+        "z": "59c3cf3e48fd4ac7",
+        "name": "SUBSISTEM 3: Daging Putih",
+        "info": "",
+        "x": 520,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "ca6e92efa9cecbea",
+        "type": "mqtt out",
+        "z": "59c3cf3e48fd4ac7",
+        "name": "",
+        "topic": "prauas/pabrik1/subsistem3/microbacteria",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "f83c5627801f002d",
+        "x": 1040,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "cac6a7d919a53ea6",
+        "type": "mqtt out",
+        "z": "59c3cf3e48fd4ac7",
+        "name": "",
+        "topic": "prauas/pabrik1/subsistem3/kadarprotein",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "f83c5627801f002d",
+        "x": 1040,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "6d0dadcb6efa8e06",
+        "type": "mqtt out",
+        "z": "59c3cf3e48fd4ac7",
+        "name": "",
+        "topic": "prauas/pabrik1/subsistem3/keasamandaging",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "f83c5627801f002d",
+        "x": 1050,
+        "y": 960,
+        "wires": []
+    },
+    {
+        "id": "db4650491c6c0e19",
+        "type": "random",
+        "z": "59c3cf3e48fd4ac7",
+        "name": "Sensor Kekuningan Padi (0 - 100 b*)",
+        "low": "0",
+        "high": "100",
+        "inte": "false",
+        "property": "payload",
+        "x": 550,
+        "y": 1100,
+        "wires": [
+            [
+                "56f6d6b881deaa6f",
+                "99176d4cabb5e845"
+            ]
+        ]
+    },
+    {
+        "id": "2b84a5efc7e7bef3",
+        "type": "random",
+        "z": "59c3cf3e48fd4ac7",
+        "name": "Sensor Kebulatan Padi (0 - 10 IPB)",
+        "low": "0",
+        "high": "10",
+        "inte": "false",
+        "property": "payload",
+        "x": 540,
+        "y": 1180,
+        "wires": [
+            [
+                "69e40da14a3f1349",
+                "dc8ec73bd4971c08"
+            ]
+        ]
+    },
+    {
+        "id": "363d57fbae88756f",
+        "type": "random",
+        "z": "59c3cf3e48fd4ac7",
+        "name": "Sensor Kadar Karbohidrat (0 - 100%)",
+        "low": "0",
+        "high": "100",
+        "inte": "false",
+        "property": "payload",
+        "x": 550,
+        "y": 1240,
+        "wires": [
+            [
+                "64c2b376d1d1a0c0",
+                "9ac71b88f8f26df4"
+            ]
+        ]
+    },
+    {
+        "id": "852638d037969d17",
+        "type": "comment",
+        "z": "59c3cf3e48fd4ac7",
+        "name": "SUBSISTEM 1: Sumber Karbohidrat",
+        "info": "",
+        "x": 540,
+        "y": 1060,
+        "wires": []
+    },
+    {
+        "id": "5626ea4feb3a4b2e",
+        "type": "comment",
+        "z": "59c3cf3e48fd4ac7",
+        "name": "PABRIK 2: Smart Plantation",
+        "info": "",
+        "x": 800,
+        "y": 1020,
+        "wires": []
+    },
+    {
+        "id": "56f6d6b881deaa6f",
+        "type": "mqtt out",
+        "z": "59c3cf3e48fd4ac7",
+        "name": "",
+        "topic": "prauas/pabrik2/subsistem1/kekuninganpadi",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "f83c5627801f002d",
+        "x": 1050,
+        "y": 1100,
+        "wires": []
+    },
+    {
+        "id": "69e40da14a3f1349",
+        "type": "mqtt out",
+        "z": "59c3cf3e48fd4ac7",
+        "name": "",
+        "topic": "prauas/pabrik2/subsistem1/kebulatanpadi",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "f83c5627801f002d",
+        "x": 1040,
+        "y": 1180,
+        "wires": []
+    },
+    {
+        "id": "64c2b376d1d1a0c0",
+        "type": "mqtt out",
+        "z": "59c3cf3e48fd4ac7",
+        "name": "",
+        "topic": "prauas/pabrik2/subsistem1/kadarkarbohidrat",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "f83c5627801f002d",
+        "x": 1050,
+        "y": 1260,
+        "wires": []
+    },
+    {
+        "id": "f7bbab404e17a596",
+        "type": "random",
+        "z": "59c3cf3e48fd4ac7",
+        "name": "Sensor Kehijauan (0 - 100 a*)",
+        "low": "0",
+        "high": "100",
+        "inte": "false",
+        "property": "payload",
+        "x": 530,
+        "y": 1340,
+        "wires": [
+            [
+                "c90c364a7bd346d8",
+                "145f9838e8822567"
+            ]
+        ]
+    },
+    {
+        "id": "cf03d6b08f6fdaba",
+        "type": "random",
+        "z": "59c3cf3e48fd4ac7",
+        "name": "Sensor Kadar Klorofil (0-1000 µg/cm²)",
+        "low": "0",
+        "high": "1000",
+        "inte": "false",
+        "property": "payload",
+        "x": 550,
+        "y": 1420,
+        "wires": [
+            [
+                "10649fe4a82574ab",
+                "aea8b19c0f75da5b"
+            ]
+        ]
+    },
+    {
+        "id": "7edc15b246f4b5e8",
+        "type": "random",
+        "z": "59c3cf3e48fd4ac7",
+        "name": "Sensor Amonia (0 - 1000 ppm)",
+        "low": "0",
+        "high": "1000",
+        "inte": "false",
+        "property": "payload",
+        "x": 530,
+        "y": 1500,
+        "wires": [
+            [
+                "b40ae164d9d9c6ea",
+                "b1fc1e11c6140898"
+            ]
+        ]
+    },
+    {
+        "id": "343c041632cc9dbb",
+        "type": "comment",
+        "z": "59c3cf3e48fd4ac7",
+        "name": "SUBSISTEM 2: Sayuran",
+        "info": "",
+        "x": 510,
+        "y": 1300,
+        "wires": []
+    },
+    {
+        "id": "c90c364a7bd346d8",
+        "type": "mqtt out",
+        "z": "59c3cf3e48fd4ac7",
+        "name": "",
+        "topic": "prauas/pabrik2/subsistem2/kehijauan",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "f83c5627801f002d",
+        "x": 1030,
+        "y": 1360,
+        "wires": []
+    },
+    {
+        "id": "10649fe4a82574ab",
+        "type": "mqtt out",
+        "z": "59c3cf3e48fd4ac7",
+        "name": "",
+        "topic": "prauas/pabrik2/subsistem2/kadarklorofil",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "f83c5627801f002d",
+        "x": 1040,
+        "y": 1440,
+        "wires": []
+    },
+    {
+        "id": "b40ae164d9d9c6ea",
+        "type": "mqtt out",
+        "z": "59c3cf3e48fd4ac7",
+        "name": "",
+        "topic": "prauas/pabrik2/subsistem2/amonia",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "f83c5627801f002d",
+        "x": 1020,
+        "y": 1520,
+        "wires": []
+    },
+    {
+        "id": "4956d72e79267ce9",
+        "type": "random",
+        "z": "59c3cf3e48fd4ac7",
+        "name": "Sensor Etilen (0 - 1000 ppm)",
+        "low": "0",
+        "high": "1000",
+        "inte": "false",
+        "property": "payload",
+        "x": 520,
+        "y": 1600,
+        "wires": [
+            [
+                "99dd1e1b8a6c4750",
+                "65a1b135fa498d1f"
+            ]
+        ]
+    },
+    {
+        "id": "5ca8402d8ae22359",
+        "type": "random",
+        "z": "59c3cf3e48fd4ac7",
+        "name": "Sensor Kadar Gula (0 - 100%)",
+        "low": "0",
+        "high": "100",
+        "inte": "false",
+        "property": "payload",
+        "x": 530,
+        "y": 1680,
+        "wires": [
+            [
+                "d336faae0c5a20e7",
+                "b3f0a1be766d2a04"
+            ]
+        ]
+    },
+    {
+        "id": "24b454fefa24a949",
+        "type": "random",
+        "z": "59c3cf3e48fd4ac7",
+        "name": "Sensor Kepadatan (0 - 3 g/cm3)",
+        "low": "0",
+        "high": "3",
+        "inte": "false",
+        "property": "payload",
+        "x": 530,
+        "y": 1760,
+        "wires": [
+            [
+                "cbcfa702e8a896a9",
+                "4dba54dcba7926e6"
+            ]
+        ]
+    },
+    {
+        "id": "3f5f3b7f2fa50c2b",
+        "type": "comment",
+        "z": "59c3cf3e48fd4ac7",
+        "name": "SUBSISTEM 3: Buah-Buahan",
+        "info": "",
+        "x": 520,
+        "y": 1560,
+        "wires": []
+    },
+    {
+        "id": "99dd1e1b8a6c4750",
+        "type": "mqtt out",
+        "z": "59c3cf3e48fd4ac7",
+        "name": "",
+        "topic": "prauas/pabrik2/subsistem3/etilen",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "f83c5627801f002d",
+        "x": 1020,
+        "y": 1620,
+        "wires": []
+    },
+    {
+        "id": "cc44642d5f0c81aa",
+        "type": "random",
+        "z": "59c3cf3e48fd4ac7",
+        "name": "Sensor Suhu (0 - 40 C)",
+        "low": "0",
+        "high": "40",
+        "inte": "false",
+        "property": "payload",
+        "x": 510,
+        "y": 1920,
+        "wires": [
+            [
+                "ab6abbcc1fc762c6",
+                "8337ba0d40a5429d"
+            ]
+        ]
+    },
+    {
+        "id": "f41f99b2d1093806",
+        "type": "random",
+        "z": "59c3cf3e48fd4ac7",
+        "name": "Sensor Arah Angin (0 - 360 deg)",
+        "low": "0",
+        "high": "360",
+        "inte": "false",
+        "property": "payload",
+        "x": 530,
+        "y": 1980,
+        "wires": [
+            [
+                "3c86326fcf8c0d59",
+                "a3b41334056fe0ba"
+            ]
+        ]
+    },
+    {
+        "id": "fd3424753ef7f9f5",
+        "type": "random",
+        "z": "59c3cf3e48fd4ac7",
+        "name": "Sensor Curah Hujan (0 - 10000 mm)",
+        "low": "0",
+        "high": "10000",
+        "inte": "false",
+        "property": "payload",
+        "x": 550,
+        "y": 2060,
+        "wires": [
+            [
+                "c30cdbab3af7db48",
+                "b967af109bc79d69"
+            ]
+        ]
+    },
+    {
+        "id": "33f74a22f1ed791e",
+        "type": "comment",
+        "z": "59c3cf3e48fd4ac7",
+        "name": "SUBSISTEM 1: Deteksi Musim",
+        "info": "",
+        "x": 530,
+        "y": 1880,
+        "wires": []
+    },
+    {
+        "id": "6a912b90173d17f9",
+        "type": "comment",
+        "z": "59c3cf3e48fd4ac7",
+        "name": "PABRIK 3: Smart Restaurant",
+        "info": "",
+        "x": 800,
+        "y": 1840,
+        "wires": []
+    },
+    {
+        "id": "8244fcae843e2579",
+        "type": "random",
+        "z": "59c3cf3e48fd4ac7",
+        "name": "Sensor Rate Penjualan (0 - 1000 barang/jam)",
+        "low": "0",
+        "high": "1000",
+        "inte": "false",
+        "property": "payload",
+        "x": 570,
+        "y": 2240,
+        "wires": [
+            [
+                "e797223b307924c7",
+                "9616ee862708d3ce"
+            ]
+        ]
+    },
+    {
+        "id": "fe052ee5546180d9",
+        "type": "random",
+        "z": "59c3cf3e48fd4ac7",
+        "name": "Sensor Jumlah Pembayaran (Rp1000 - 10000000)",
+        "low": "1000",
+        "high": "10000000",
+        "inte": "false",
+        "property": "payload",
+        "x": 590,
+        "y": 2320,
+        "wires": [
+            [
+                "04cb60287653cf68",
+                "7bfbc114a242c376"
+            ]
+        ]
+    },
+    {
+        "id": "3c939f864ad16753",
+        "type": "comment",
+        "z": "59c3cf3e48fd4ac7",
+        "name": "SUBSISTEM 2: Deteksi Hasil Penjualan Berfluktuasi",
+        "info": "",
+        "x": 590,
+        "y": 2120,
+        "wires": []
+    },
+    {
+        "id": "9524d43b4e81535a",
+        "type": "random",
+        "z": "59c3cf3e48fd4ac7",
+        "name": "Sensor Penghitung Waiter Idle (0-30 orang)",
+        "low": "0",
+        "high": "30",
+        "inte": "false",
+        "property": "payload",
+        "x": 570,
+        "y": 2420,
+        "wires": [
+            [
+                "08b0f74c4f1f5f3a",
+                "5e746d1103a42fbc"
+            ]
+        ]
+    },
+    {
+        "id": "5714faa2828faa97",
+        "type": "random",
+        "z": "59c3cf3e48fd4ac7",
+        "name": "Sensor Okupansi Restoran (0 - 300 orang)",
+        "low": "0",
+        "high": "300",
+        "inte": "false",
+        "property": "payload",
+        "x": 570,
+        "y": 2500,
+        "wires": [
+            [
+                "931067175f686c6b",
+                "0acd56889aa05aa6"
+            ]
+        ]
+    },
+    {
+        "id": "f1358c83bac56a4d",
+        "type": "random",
+        "z": "59c3cf3e48fd4ac7",
+        "name": "Sensor Stok Piring (0 - 1000 piring)",
+        "low": "0",
+        "high": "1000",
+        "inte": "false",
+        "property": "payload",
+        "x": 540,
+        "y": 2580,
+        "wires": [
+            [
+                "5ae52245e6a04f33",
+                "f421b9c6fac8b062"
+            ]
+        ]
+    },
+    {
+        "id": "30467f7442a0be1b",
+        "type": "comment",
+        "z": "59c3cf3e48fd4ac7",
+        "name": "SUBSISTEM 3: Deteksi Jumlah Pengunjung Restoran",
+        "info": "",
+        "x": 600,
+        "y": 2380,
+        "wires": []
+    },
+    {
+        "id": "ddb296e00b84da67",
+        "type": "ui_text",
+        "z": "59c3cf3e48fd4ac7",
+        "group": "36e3a3bdf2f1f6fd",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Kadar Protein Susu",
+        "format": "{{msg.payload}} g",
+        "layout": "row-spread",
+        "className": "",
+        "x": 970,
+        "y": 240,
+        "wires": [],
+        "inputLabels": [
+            "Label 1"
+        ]
+    },
+    {
+        "id": "80108c78499dcdf2",
+        "type": "ui_text",
+        "z": "59c3cf3e48fd4ac7",
+        "group": "36e3a3bdf2f1f6fd",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Kekentalan Susu",
+        "format": "{{msg.payload}} cP",
+        "layout": "row-spread",
+        "className": "",
+        "x": 970,
+        "y": 320,
+        "wires": [],
+        "inputLabels": [
+            "Label 1"
+        ]
+    },
+    {
+        "id": "09ac40bb7d7a832b",
+        "type": "ui_text",
+        "z": "59c3cf3e48fd4ac7",
+        "group": "36e3a3bdf2f1f6fd",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Jumlah Kuning Telur",
+        "format": "{{msg.payload}} butir",
+        "layout": "row-spread",
+        "className": "",
+        "x": 980,
+        "y": 400,
+        "wires": [],
+        "inputLabels": [
+            "Label 1"
+        ]
+    },
+    {
+        "id": "fc8aaaa9c76cd140",
+        "type": "ui_text",
+        "z": "59c3cf3e48fd4ac7",
+        "group": "6441fbe3d958eaca",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Kemerahan Daging",
+        "format": "{{msg.payload}} a*",
+        "layout": "row-spread",
+        "className": "",
+        "x": 970,
+        "y": 500,
+        "wires": [],
+        "inputLabels": [
+            "Label 1"
+        ]
+    },
+    {
+        "id": "118d3c1cf599ba6e",
+        "type": "ui_text",
+        "z": "59c3cf3e48fd4ac7",
+        "group": "6441fbe3d958eaca",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Kadar Lemak",
+        "format": "{{msg.payload}}%",
+        "layout": "row-spread",
+        "className": "",
+        "x": 950,
+        "y": 580,
+        "wires": [],
+        "inputLabels": [
+            "Label 1"
+        ]
+    },
+    {
+        "id": "64294ed97d75c650",
+        "type": "ui_text",
+        "z": "59c3cf3e48fd4ac7",
+        "group": "6441fbe3d958eaca",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Kadar Air",
+        "format": "{{msg.payload}}%",
+        "layout": "row-spread",
+        "className": "",
+        "x": 940,
+        "y": 660,
+        "wires": [],
+        "inputLabels": [
+            "Label 1"
+        ]
+    },
+    {
+        "id": "5adfcafb9769d98a",
+        "type": "ui_text",
+        "z": "59c3cf3e48fd4ac7",
+        "group": "e12c2be6a44794e6",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Microbacteria",
+        "format": "{{msg.payload}} mg/kg",
+        "layout": "row-spread",
+        "className": "",
+        "x": 960,
+        "y": 760,
+        "wires": [],
+        "inputLabels": [
+            "Label 1"
+        ]
+    },
+    {
+        "id": "5e0a5b2b2c5032cb",
+        "type": "ui_text",
+        "z": "59c3cf3e48fd4ac7",
+        "group": "e12c2be6a44794e6",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Kadar Protein",
+        "format": "{{msg.payload}}%",
+        "layout": "row-spread",
+        "className": "",
+        "x": 960,
+        "y": 840,
+        "wires": [],
+        "inputLabels": [
+            "Label 1"
+        ]
+    },
+    {
+        "id": "db5bf1901dd639b3",
+        "type": "ui_text",
+        "z": "59c3cf3e48fd4ac7",
+        "group": "e12c2be6a44794e6",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Keasaman Daging",
+        "format": "{{msg.payload}} ph",
+        "layout": "row-spread",
+        "className": "",
+        "x": 970,
+        "y": 920,
+        "wires": [],
+        "inputLabels": [
+            "Label 1"
+        ]
+    },
+    {
+        "id": "99176d4cabb5e845",
+        "type": "ui_text",
+        "z": "59c3cf3e48fd4ac7",
+        "group": "d9f0bc165d91617f",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Kekuningan Padi",
+        "format": "{{msg.payload}} b*",
+        "layout": "row-spread",
+        "className": "",
+        "x": 970,
+        "y": 1060,
+        "wires": [],
+        "inputLabels": [
+            "Label 1"
+        ]
+    },
+    {
+        "id": "dc8ec73bd4971c08",
+        "type": "ui_text",
+        "z": "59c3cf3e48fd4ac7",
+        "group": "d9f0bc165d91617f",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Kebulatan Padi",
+        "format": "{{msg.payload}} IPB",
+        "layout": "row-spread",
+        "className": "",
+        "x": 960,
+        "y": 1140,
+        "wires": [],
+        "inputLabels": [
+            "Label 1"
+        ]
+    },
+    {
+        "id": "9ac71b88f8f26df4",
+        "type": "ui_text",
+        "z": "59c3cf3e48fd4ac7",
+        "group": "d9f0bc165d91617f",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Kadar Karbohidrat",
+        "format": "{{msg.payload}}%",
+        "layout": "row-spread",
+        "className": "",
+        "x": 970,
+        "y": 1220,
+        "wires": [],
+        "inputLabels": [
+            "Label 1"
+        ]
+    },
+    {
+        "id": "145f9838e8822567",
+        "type": "ui_text",
+        "z": "59c3cf3e48fd4ac7",
+        "group": "c702f34a859e71bd",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Kehijauan",
+        "format": "{{msg.payload}} a*",
+        "layout": "row-spread",
+        "className": "",
+        "x": 940,
+        "y": 1320,
+        "wires": [],
+        "inputLabels": [
+            "Label 1"
+        ]
+    },
+    {
+        "id": "aea8b19c0f75da5b",
+        "type": "ui_text",
+        "z": "59c3cf3e48fd4ac7",
+        "group": "c702f34a859e71bd",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Kadar Klorofil",
+        "format": "{{msg.payload}} µg/cm²",
+        "layout": "row-spread",
+        "className": "",
+        "x": 960,
+        "y": 1400,
+        "wires": [],
+        "inputLabels": [
+            "Label 1"
+        ]
+    },
+    {
+        "id": "b1fc1e11c6140898",
+        "type": "ui_text",
+        "z": "59c3cf3e48fd4ac7",
+        "group": "c702f34a859e71bd",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Kadar Amonia",
+        "format": "{{msg.payload}} ppm",
+        "layout": "row-spread",
+        "className": "",
+        "x": 960,
+        "y": 1480,
+        "wires": [],
+        "inputLabels": [
+            "Label 1"
+        ]
+    },
+    {
+        "id": "65a1b135fa498d1f",
+        "type": "ui_text",
+        "z": "59c3cf3e48fd4ac7",
+        "group": "681d0b1b2de27df0",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Kadar Etilen",
+        "format": "{{msg.payload}} ppm",
+        "layout": "row-spread",
+        "className": "",
+        "x": 950,
+        "y": 1580,
+        "wires": [],
+        "inputLabels": [
+            "Label 1"
+        ]
+    },
+    {
+        "id": "d336faae0c5a20e7",
+        "type": "ui_text",
+        "z": "59c3cf3e48fd4ac7",
+        "group": "681d0b1b2de27df0",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Kadar Gula",
+        "format": "{{msg.payload}} mg/kg",
+        "layout": "row-spread",
+        "className": "",
+        "x": 950,
+        "y": 1660,
+        "wires": [],
+        "inputLabels": [
+            "Label 1"
+        ]
+    },
+    {
+        "id": "b3f0a1be766d2a04",
+        "type": "mqtt out",
+        "z": "59c3cf3e48fd4ac7",
+        "name": "",
+        "topic": "prauas/pabrik2/subsistem3/kadargula",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "f83c5627801f002d",
+        "x": 1030,
+        "y": 1700,
+        "wires": []
+    },
+    {
+        "id": "cbcfa702e8a896a9",
+        "type": "ui_text",
+        "z": "59c3cf3e48fd4ac7",
+        "group": "681d0b1b2de27df0",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Kepadatan",
+        "format": "{{msg.payload}} g/cm3",
+        "layout": "row-spread",
+        "className": "",
+        "x": 950,
+        "y": 1740,
+        "wires": [],
+        "inputLabels": [
+            "Label 1"
+        ]
+    },
+    {
+        "id": "4dba54dcba7926e6",
+        "type": "mqtt out",
+        "z": "59c3cf3e48fd4ac7",
+        "name": "",
+        "topic": "prauas/pabrik2/subsistem3/kepadatan",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "f83c5627801f002d",
+        "x": 1030,
+        "y": 1780,
+        "wires": []
+    },
+    {
+        "id": "ab6abbcc1fc762c6",
+        "type": "ui_text",
+        "z": "59c3cf3e48fd4ac7",
+        "group": "5584b63f946dce3f",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Suhu",
+        "format": "{{msg.payload}} C",
+        "layout": "row-spread",
+        "className": "",
+        "x": 930,
+        "y": 1880,
+        "wires": [],
+        "inputLabels": [
+            "Label 1"
+        ]
+    },
+    {
+        "id": "8337ba0d40a5429d",
+        "type": "mqtt out",
+        "z": "59c3cf3e48fd4ac7",
+        "name": "",
+        "topic": "prauas/pabrik3/subsistem1/suhu",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "f83c5627801f002d",
+        "x": 1010,
+        "y": 1920,
+        "wires": []
+    },
+    {
+        "id": "3c86326fcf8c0d59",
+        "type": "ui_text",
+        "z": "59c3cf3e48fd4ac7",
+        "group": "5584b63f946dce3f",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Arah Angin",
+        "format": "{{msg.payload}} deg",
+        "layout": "row-spread",
+        "className": "",
+        "x": 950,
+        "y": 1960,
+        "wires": [],
+        "inputLabels": [
+            "Label 1"
+        ]
+    },
+    {
+        "id": "a3b41334056fe0ba",
+        "type": "mqtt out",
+        "z": "59c3cf3e48fd4ac7",
+        "name": "",
+        "topic": "prauas/pabrik3/subsistem1/arahangin",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "f83c5627801f002d",
+        "x": 1030,
+        "y": 2000,
+        "wires": []
+    },
+    {
+        "id": "c30cdbab3af7db48",
+        "type": "ui_text",
+        "z": "59c3cf3e48fd4ac7",
+        "group": "5584b63f946dce3f",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Curah Hujan",
+        "format": "{{msg.payload}} mm",
+        "layout": "row-spread",
+        "className": "",
+        "x": 950,
+        "y": 2040,
+        "wires": [],
+        "inputLabels": [
+            "Label 1"
+        ]
+    },
+    {
+        "id": "b967af109bc79d69",
+        "type": "mqtt out",
+        "z": "59c3cf3e48fd4ac7",
+        "name": "",
+        "topic": "prauas/pabrik3/subsistem1/curahhujan",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "f83c5627801f002d",
+        "x": 1030,
+        "y": 2080,
+        "wires": []
+    },
+    {
+        "id": "c9bbe1d31efaf827",
+        "type": "random",
+        "z": "59c3cf3e48fd4ac7",
+        "name": "Sensor Penghitung Kasir Idle (0-30 orang)",
+        "low": "0",
+        "high": "30",
+        "inte": "false",
+        "property": "payload",
+        "x": 560,
+        "y": 2160,
+        "wires": [
+            [
+                "14ee440ee9749f17",
+                "e85a6301bdfc3188"
+            ]
+        ]
+    },
+    {
+        "id": "08b0f74c4f1f5f3a",
+        "type": "ui_text",
+        "z": "59c3cf3e48fd4ac7",
+        "group": "1fadb722745435cf",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Waiter Idle",
+        "format": "{{msg.payload}} orang",
+        "layout": "row-spread",
+        "className": "",
+        "x": 950,
+        "y": 2400,
+        "wires": [],
+        "inputLabels": [
+            "Label 1"
+        ]
+    },
+    {
+        "id": "5e746d1103a42fbc",
+        "type": "mqtt out",
+        "z": "59c3cf3e48fd4ac7",
+        "name": "",
+        "topic": "prauas/pabrik3/subsistem3/waiteridle",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "f83c5627801f002d",
+        "x": 1030,
+        "y": 2440,
+        "wires": []
+    },
+    {
+        "id": "931067175f686c6b",
+        "type": "ui_text",
+        "z": "59c3cf3e48fd4ac7",
+        "group": "1fadb722745435cf",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Okupansi Restoran",
+        "format": "{{msg.payload}} orang",
+        "layout": "row-spread",
+        "className": "",
+        "x": 970,
+        "y": 2480,
+        "wires": [],
+        "inputLabels": [
+            "Label 1"
+        ]
+    },
+    {
+        "id": "0acd56889aa05aa6",
+        "type": "mqtt out",
+        "z": "59c3cf3e48fd4ac7",
+        "name": "",
+        "topic": "prauas/pabrik3/subsistem3/okupansirestoran",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "f83c5627801f002d",
+        "x": 1050,
+        "y": 2520,
+        "wires": []
+    },
+    {
+        "id": "5ae52245e6a04f33",
+        "type": "ui_text",
+        "z": "59c3cf3e48fd4ac7",
+        "group": "1fadb722745435cf",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Stok Piring",
+        "format": "{{msg.payload}} piring",
+        "layout": "row-spread",
+        "className": "",
+        "x": 950,
+        "y": 2560,
+        "wires": [],
+        "inputLabels": [
+            "Label 1"
+        ]
+    },
+    {
+        "id": "f421b9c6fac8b062",
+        "type": "mqtt out",
+        "z": "59c3cf3e48fd4ac7",
+        "name": "",
+        "topic": "prauas/pabrik3/subsistem3/stokpiring",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "f83c5627801f002d",
+        "x": 1030,
+        "y": 2600,
+        "wires": []
+    },
+    {
+        "id": "14ee440ee9749f17",
+        "type": "ui_text",
+        "z": "59c3cf3e48fd4ac7",
+        "group": "2cf9740628668478",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Kasir Idle",
+        "format": "{{msg.payload}} orang",
+        "layout": "row-spread",
+        "className": "",
+        "x": 940,
+        "y": 2140,
+        "wires": [],
+        "inputLabels": [
+            "Label 1"
+        ]
+    },
+    {
+        "id": "e85a6301bdfc3188",
+        "type": "mqtt out",
+        "z": "59c3cf3e48fd4ac7",
+        "name": "",
+        "topic": "prauas/pabrik3/subsistem2/kasiridle",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "f83c5627801f002d",
+        "x": 1020,
+        "y": 2180,
+        "wires": []
+    },
+    {
+        "id": "e797223b307924c7",
+        "type": "ui_text",
+        "z": "59c3cf3e48fd4ac7",
+        "group": "2cf9740628668478",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Rate Penjualan",
+        "format": "{{msg.payload}} barang/jam",
+        "layout": "row-spread",
+        "className": "",
+        "x": 960,
+        "y": 2220,
+        "wires": [],
+        "inputLabels": [
+            "Label 1"
+        ]
+    },
+    {
+        "id": "9616ee862708d3ce",
+        "type": "mqtt out",
+        "z": "59c3cf3e48fd4ac7",
+        "name": "",
+        "topic": "prauas/pabrik3/subsistem2/ratepenjualan",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "f83c5627801f002d",
+        "x": 1040,
+        "y": 2260,
+        "wires": []
+    },
+    {
+        "id": "04cb60287653cf68",
+        "type": "ui_text",
+        "z": "59c3cf3e48fd4ac7",
+        "group": "2cf9740628668478",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Jumlah Pembayaran",
+        "format": "Rp{{msg.payload}} ",
+        "layout": "row-spread",
+        "className": "",
+        "x": 980,
+        "y": 2300,
+        "wires": [],
+        "inputLabels": [
+            "Label 1"
+        ]
+    },
+    {
+        "id": "7bfbc114a242c376",
+        "type": "mqtt out",
+        "z": "59c3cf3e48fd4ac7",
+        "name": "",
+        "topic": "prauas/pabrik3/subsistem2/jumlahpembayaran",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "f83c5627801f002d",
+        "x": 1060,
+        "y": 2340,
+        "wires": []
+    },
+    {
+        "id": "c0be278347de5e7c",
+        "type": "ui_text",
+        "z": "59c3cf3e48fd4ac7",
+        "group": "c4fc4f4249644463",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "PABRIK 1: Smart Farm",
+        "label": "",
+        "format": "PABRIK 1: Smart Farm",
+        "layout": "row-center",
+        "className": "",
+        "x": 170,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "a689c2af4b02cc68",
+        "type": "ui_text",
+        "z": "59c3cf3e48fd4ac7",
+        "group": "cdb8e15fadb24e1a",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "PABRIK 2: Smart Plantation",
+        "label": "",
+        "format": "PABRIK 2: Smart Plantation",
+        "layout": "row-center",
+        "className": "",
+        "x": 180,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "32dcfb8e28203ff8",
+        "type": "ui_text",
+        "z": "59c3cf3e48fd4ac7",
+        "group": "9ac2f4ade8f6edee",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "PABRIK 3: Smart Restaurant",
+        "label": "",
+        "format": "PABRIK 3: Smart Restaurant",
+        "layout": "row-center",
+        "className": "",
+        "x": 180,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "f83c5627801f002d",
+        "type": "mqtt-broker",
+        "name": "Laptop Daniel",
+        "broker": "localhost",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "36e3a3bdf2f1f6fd",
+        "type": "ui_group",
+        "name": "Subsistem 1: Susu Hewani dan Telur",
+        "tab": "35fb49d0a3ea01f6",
+        "order": 4,
+        "disp": true,
+        "width": 11,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "6441fbe3d958eaca",
+        "type": "ui_group",
+        "name": "Subsistem 2: Daging Merah",
+        "tab": "35fb49d0a3ea01f6",
+        "order": 7,
+        "disp": true,
+        "width": 11,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "e12c2be6a44794e6",
+        "type": "ui_group",
+        "name": "Subsistem 3: Daging Putih",
+        "tab": "35fb49d0a3ea01f6",
+        "order": 10,
+        "disp": true,
+        "width": 11,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "d9f0bc165d91617f",
+        "type": "ui_group",
+        "name": "Subsistem 1: Sumber Karbohidrat",
+        "tab": "35fb49d0a3ea01f6",
+        "order": 5,
+        "disp": true,
+        "width": 11,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "c702f34a859e71bd",
+        "type": "ui_group",
+        "name": "Subsistem 2: Sayuran",
+        "tab": "35fb49d0a3ea01f6",
+        "order": 8,
+        "disp": true,
+        "width": 11,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "681d0b1b2de27df0",
+        "type": "ui_group",
+        "name": "Subsistem 3: Buah-Buahan",
+        "tab": "35fb49d0a3ea01f6",
+        "order": 11,
+        "disp": true,
+        "width": 11,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "5584b63f946dce3f",
+        "type": "ui_group",
+        "name": "Subsistem 1: Deteksi Musim",
+        "tab": "35fb49d0a3ea01f6",
+        "order": 6,
+        "disp": true,
+        "width": 11,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "1fadb722745435cf",
+        "type": "ui_group",
+        "name": "Subsistem 3: Deteksi Jumlah Pengunjung Restoran",
+        "tab": "35fb49d0a3ea01f6",
+        "order": 12,
+        "disp": true,
+        "width": 11,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "2cf9740628668478",
+        "type": "ui_group",
+        "name": "Subsistem 2: Deteksi Hasil Penjualan Berfluktuasi",
+        "tab": "35fb49d0a3ea01f6",
+        "order": 9,
+        "disp": true,
+        "width": 11,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "c4fc4f4249644463",
+        "type": "ui_group",
+        "name": "SISTEM 1: Smart Farm",
+        "tab": "35fb49d0a3ea01f6",
+        "order": 1,
+        "disp": false,
+        "width": 11,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "cdb8e15fadb24e1a",
+        "type": "ui_group",
+        "name": "SISTEM 2: Smart Plantation",
+        "tab": "35fb49d0a3ea01f6",
+        "order": 2,
+        "disp": false,
+        "width": 11,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "9ac2f4ade8f6edee",
+        "type": "ui_group",
+        "name": "SISTEM 3: Smart Restaurant",
+        "tab": "35fb49d0a3ea01f6",
+        "order": 3,
+        "disp": false,
+        "width": 11,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "35fb49d0a3ea01f6",
+        "type": "ui_tab",
+        "name": "IEE3032 - PraUAS - Daniel Wiratman - 202000205",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    }
+]
