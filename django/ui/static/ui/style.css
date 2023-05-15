@@ -1,0 +1,48 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  height: 100%;
+}
+
+h1.mainTitle {
+  margin-top: 30px;
+}
+
+h2.mainTitle {
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+
+.mainTitle {
+  text-align: center;
+}
+
+.container {
+  margin: 0 100px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.box {
+  width: 550px;
+  z-index: 99;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transition: all 400ms;
+}
+
+.box p {
+  
+}
+
+.box h1:first-child {
+  margin-bottom: 15px;;
+}
+
+.box h2 {
+  margin: 20px 0 0;
+}
