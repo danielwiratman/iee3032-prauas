@@ -4,7 +4,7 @@ from django.shortcuts import render
 import paho.mqtt.client as mqtt
 
 from .models import Sensor
-from helpers.ml import get_ml_pabrik1_subsistem, get_ml_pabrik2_subsistem, get_ml_pabrik3_subsistem, get_ml_pabrik, get_ml_all
+from helpers.ml import *
 from helpers.mqtthandlers import *
 
 def index(request):

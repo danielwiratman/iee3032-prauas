@@ -16,6 +16,15 @@ def on_message_122(client, userdata, message):
 def on_message_123(client, userdata, message):
     pass
 
+def on_message_131(client, userdata, message):
+    pass
+
+def on_message_132(client, userdata, message):
+    pass
+
+def on_message_133(client, userdata, message):
+    pass
+
 def on_message_211(client, userdata, message):
     pass
 
