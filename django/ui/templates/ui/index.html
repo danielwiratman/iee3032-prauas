@@ -94,6 +94,7 @@
         </div>
         <script>
             function updateView(data) {
+              console.log(data)
               document.querySelector('#subsistem1-kadarproteinsusu').innerHTML = data.pabrik1.subsistem1.kadarproteinsusu;
               document.querySelector('#subsistem1-kekentalansusu').innerHTML = data.pabrik1.subsistem1.kekentalansusu;
               document.querySelector('#subsistem1-jumlahkuningtelur').innerHTML = data.pabrik1.subsistem1.jumlahkuningtelur;
@@ -125,7 +126,7 @@
 
             function getData() {
                 fetch(`http://${window.location.host}/api/sensor/`)
-                    .then((res) => res.json())
+                    .then((res) => res.text())
                     .then((data) => updateView(data));
             }
 
