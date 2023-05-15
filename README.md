@@ -1,6 +1,13 @@
 # IEE3032 - PraUAS - Daniel Wiratman - 202000205
 IEE3032 PraUAS. Creating a system with 27 sensors communicating through MQTT to a django full stack web dashboard
 
+## Django
+---
+### Dashboard
+![image](https://github.com/danielwiratman/iee3032-prauas/assets/74503671/c3e99eab-2b8a-4587-b792-19eb49b342d7)
+![image](https://github.com/danielwiratman/iee3032-prauas/assets/74503671/dbca82bb-e11e-46f6-a3ed-31fa2036d00e)
+
+
 ## Node-Red
 ---
 ### Dashboard
