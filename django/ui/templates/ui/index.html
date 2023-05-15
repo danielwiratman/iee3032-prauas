@@ -12,125 +12,441 @@
     <body>
         <h1 class="mainTitle">IEE3032 - PRAUAS</h1>
         <h2 class="mainTitle">By: Daniel Wiratman (202000205)</h2>
+        <h2>Aktuator 3 Pabrik</h2>
+        <h2 id='ml_all'></h2>
         <div class="container">
             <div class="box">
                 <h1>PABRIK 1: Smart Farm</h1>
+                <h2>Aktuator Pabrik 1:</h2>
+                <h3 id='ml_pabrik1'></h3>
                 <h2>SUBSISTEM 1: Susu Hewani dan Telur</h2>
                 <p>Sensor Kadar Protein Susu</p>
+                {% comment %} <canvas id="subsistem1-kadarproteinsusu"></canvas> {% endcomment %}
                 <p><span id="subsistem1-kadarproteinsusu"></span> g</p>
                 <p>Sensor Kekentalan Susu</p>
+                {% comment %} <canvas id="subsistem1-kekentalansusu"></canvas> {% endcomment %}
                 <p><span id="subsistem1-kekentalansusu"></span> cP</p>
                 <p>Sensor Jumlah Kuning Telur</p>
+                {% comment %} <canvas id="subsistem1-jumlahkuningtelur"></canvas> {% endcomment %}
                 <p><span id="subsistem1-jumlahkuningtelur"></span> butir</p>
+                <p>Aktuator Susu</p>
+                <p><span id="ml_pabrik1_subsistem1"></span></p>
                 
                 <h2>SUBSISTEM 2: Daging Merah</h2>
                 <p>Sensor Kemerahan Daging</p>
+                {% comment %} <canvas id="subsistem2-kemerahandaging"></canvas> {% endcomment %}
                 <p><span id="subsistem2-kemerahandaging"></span> a*</p>
                 <p>Sensor Kadar Lemak</p>
+                {% comment %} <canvas id="subsistem2-kadarlemak"></canvas> {% endcomment %}
                 <p><span id="subsistem2-kadarlemak"></span>%</p>
                 <p>Sensor Kadar Air</p>
+                {% comment %} <canvas id="subsistem2-kadarair"></canvas> {% endcomment %}
                 <p><span id="subsistem2-kadarair"></span>%</p>
+                <p>Aktuator Daging Merah</p>
+                <p><span id="ml_pabrik1_subsistem2"></span></p>
                 
                 <h2>SUBSISTEM 3: Daging Putih</h2>
                 <p>Sensor Microbacteria</p>
+                {% comment %} <canvas id="subsistem3-microbacteria"></canvas> {% endcomment %}
                 <p><span id="subsistem3-microbacteria"></span> mg/kg</p>
                 <p>Sensor Kadar Protein</p>
+                {% comment %} <canvas id="subsistem3-kadarprotein"></canvas> {% endcomment %}
                 <p><span id="subsistem3-kadarprotein"></span>%</p>
                 <p>Sensor Keasaman Daging</p>
+                {% comment %} <canvas id="subsistem3-keasamandaging"></canvas> {% endcomment %}
                 <p><span id="subsistem3-keasamandaging"></span> ph</p>
+                <p>Aktuator Daging</p>
+                <p><span id="ml_pabrik1_subsistem3"></span></p>
             </div>
             <div class="box">
                 <h1>PABRIK 2: Smart Plantation</h1>
+                <h2>Aktuator Pabrik 2:</h2>
+                <h3 id='ml_pabrik2'></h3>
                 <h2>SUBSISTEM 1: Sumber Karbohidrat</h2>
                 <p>Sensor Kekuningan Padi</p>
-                <p><span id="subsistem1-kekuninganpadi"></span> g</p>
+                {% comment %} <canvas id="subsistem1-kekuninganpadi"></canvas> {% endcomment %}
+                <p><span id="subsistem1-kekuninganpadi"></span> b*</p>
                 <p>Sensor Kebulatan Padi</p>
-                <p><span id="subsistem1-kebulatanpadi"></span> cP</p>
+                {% comment %} <canvas id="subsistem1-kebulatanpadi"></canvas> {% endcomment %}
+                <p><span id="subsistem1-kebulatanpadi"></span> IPB</p>
                 <p>Sensor Kadar Karbohidrat</p>
-                <p><span id="subsistem1-kadarkarbohidrat"></span> butir</p>
+                {% comment %} <canvas id="subsistem1-kadarkarbohidrat"></canvas> {% endcomment %}
+                <p><span id="subsistem1-kadarkarbohidrat"></span>%</p>
+                <p>Aktuator Plantation</p>
+                <p><span id="ml_pabrik2_subsistem1"></span></p>
                 
                 <h2>SUBSISTEM 2: Sayuran</h2>
                 <p>Sensor Kehijauan</p>
+                {% comment %} <canvas id="subsistem2-kehijauan"></canvas> {% endcomment %}
                 <p><span id="subsistem2-kehijauan"></span> a*</p>
                 <p>Sensor Kadar Klorofil</p>
-                <p><span id="subsistem2-kadarklorofil"></span>%</p>
+                {% comment %} <canvas id="subsistem2-kadarklorofil"></canvas> {% endcomment %}
+                <p><span id="subsistem2-kadarklorofil"></span> &micro;g/cm2</p>
                 <p>Sensor Amonia</p>
-                <p><span id="subsistem2-amonia"></span>%</p>
+                {% comment %} <canvas id="subsistem2-amonia"></canvas> {% endcomment %}
+                <p><span id="subsistem2-amonia"></span> ppm</p>
+                <p>Aktuator Sayuran</p>
+                <p><span id="ml_pabrik2_subsistem2"></span></p>
                 
                 <h2>SUBSISTEM 3: Buah-Buahan</h2>
                 <p>Sensor Etilen</p>
-                <p><span id="subsistem3-etilen"></span> mg/kg</p>
+                {% comment %} <canvas id="subsistem3-etilen"></canvas> {% endcomment %}
+                <p><span id="subsistem3-etilen"></span> ppm</p>
                 <p>Sensor Kadar Gula</p>
+                {% comment %} <canvas id="subsistem3-kadargula"></canvas> {% endcomment %}
                 <p><span id="subsistem3-kadargula"></span>%</p>
                 <p>Sensor Kepadatan</p>
-                <p><span id="subsistem3-kepadatan"></span> ph</p>
+                {% comment %} <canvas id="subsistem3-kepadatan"></canvas> {% endcomment %}
+                <p><span id="subsistem3-kepadatan"></span> g/cm3</p>
+                <p>Aktuator Buah-Buahan</p>
+                <p><span id="ml_pabrik2_subsistem3"></span></p>
             </div>
             <div class="box">
                 <h1>PABRIK 3: Smart Restaurant</h1>
+                <h2>Aktuator Pabrik 3:</h2>
+                <h3 id='ml_pabrik3'></h3>
                 <h2>SUBSISTEM 1: Deteksi Musim</h2>
                 <p>Sensor Suhu</p>
-                <p><span id="subsistem1-suhu"></span> g</p>
+                {% comment %} <canvas id="subsistem1-suhu"></canvas> {% endcomment %}
+                <p><span id="subsistem1-suhu"></span> C</p>
                 <p>Sensor Arah Angin</p>
-                <p><span id="subsistem1-arahangin"></span> cP</p>
+                {% comment %} <canvas id="subsistem1-arahangin"></canvas> {% endcomment %}
+                <p><span id="subsistem1-arahangin"></span> &deg;</p>
                 <p>Sensor Curah Hujan</p>
-                <p><span id="subsistem1-curahhujan"></span> butir</p>
+                {% comment %} <canvas id="subsistem1-curahhujan"></canvas> {% endcomment %}
+                <p><span id="subsistem1-curahhujan"></span> mm</p>
+                <p>Aktuator Smart Restaurant</p>
+                <p><span id="ml_pabrik3_subsistem1"></span></p>
                 
                 <h2>SUBSISTEM 2: Deteksi Hasil Penjualan Berfluktuasi</h2>
                 <p>Sensor Penghitung Kasir Idle</p>
-                <p><span id="subsistem2-kasiridle"></span> a*</p>
+                {% comment %} <canvas id="subsistem2-kasiridle"></canvas> {% endcomment %}
+                <p><span id="subsistem2-kasiridle"></span> orang</p>
                 <p>Sensor Rate Penjualan</p>
-                <p><span id="subsistem2-ratepenjualan"></span>%</p>
+                {% comment %} <canvas id="subsistem2-ratepenjualan"></canvas> {% endcomment %}
+                <p><span id="subsistem2-ratepenjualan"></span> barang/jam</p>
                 <p>Sensor Jumlah Pembayaran</p>
-                <p><span id="subsistem2-jumlahpembayaran"></span>%</p>
+                {% comment %} <canvas id="subsistem2-jumlahpembayaran"></canvas> {% endcomment %}
+                <p>Rp <span id="subsistem2-jumlahpembayaran"></span></p>
+                <p>Aktuator Smart Saler</p>
+                <p><span id="ml_pabrik3_subsistem2"></span></p>
                 
                 <h2>SUBSISTEM 3: Deteksi Jumlah Pengunjung Restoran</h2>
-                <p>Sensor Penghitung Water Idle</p>
-                <p><span id="subsistem3-waiteridle"></span> mg/kg</p>
+                <p>Sensor Penghitung Waiter Idle</p>
+                {% comment %} <canvas id="subsistem3-waiteridle"></canvas> {% endcomment %}
+                <p><span id="subsistem3-waiteridle"></span> orang</p>
                 <p>Sensor Okupansi Restoran</p>
-                <p><span id="subsistem3-okupansirestoran"></span>%</p>
+                {% comment %} <canvas id="subsistem3-okupansirestoran"></canvas> {% endcomment %}
+                <p><span id="subsistem3-okupansirestoran"></span> orang</p>
                 <p>Sensor Stok Piring</p>
-                <p><span id="subsistem3-stokpiring"></span> ph</p>
+                {% comment %} <canvas id="subsistem3-stokpiring"></canvas> {% endcomment %}
+                <p><span id="subsistem3-stokpiring"></span> piring</p>
+                <p>Aktuator Visitor Count</p>
+                <p><span id="ml_pabrik3_subsistem3"></span></p>
             </div>
         </div>
+        <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
         <script>
-            function updateView(data) {
-              document.querySelector('#subsistem1-kadarproteinsusu').innerHTML = data.pabrik1.subsistem1.kadarproteinsusu;
-              document.querySelector('#subsistem1-kekentalansusu').innerHTML = data.pabrik1.subsistem1.kekentalansusu;
-              document.querySelector('#subsistem1-jumlahkuningtelur').innerHTML = data.pabrik1.subsistem1.jumlahkuningtelur;
-              document.querySelector('#subsistem1-kekuninganpadi').innerHTML = data.pabrik2.subsistem1.kekuninganpadi;
-              document.querySelector('#subsistem1-kebulatanpadi').innerHTML = data.pabrik2.subsistem1.kebulatanpadi;
-              document.querySelector('#subsistem1-kadarkarbohidrat').innerHTML = data.pabrik2.subsistem1.kadarkarbohidrat;
-              document.querySelector('#subsistem1-suhu').innerHTML = data.pabrik3.subsistem1.suhu;
-              document.querySelector('#subsistem1-arahangin').innerHTML = data.pabrik3.subsistem1.arahangin;
-              document.querySelector('#subsistem1-curahhujan').innerHTML = data.pabrik3.subsistem1.curahhujan;
-              document.querySelector('#subsistem2-kemerahandaging').innerHTML = data.pabrik1.subsistem2.kemerahandaging;
-              document.querySelector('#subsistem2-kadarlemak').innerHTML = data.pabrik1.subsistem2.kadarlemak;
-              document.querySelector('#subsistem2-kadarair').innerHTML = data.pabrik1.subsistem2.kadarair;
-              document.querySelector('#subsistem2-kehijauan').innerHTML = data.pabrik2.subsistem2.kehijauan;
-              document.querySelector('#subsistem2-kadarklorofil').innerHTML = data.pabrik2.subsistem2.kadarklorofil;
-              document.querySelector('#subsistem2-amonia').innerHTML = data.pabrik2.subsistem2.amonia;
-              document.querySelector('#subsistem2-kasiridle').innerHTML = data.pabrik3.subsistem2.kasiridle;
-              document.querySelector('#subsistem2-ratepenjualan').innerHTML = data.pabrik3.subsistem2.ratepenjualan;
-              document.querySelector('#subsistem2-jumlahpembayaran').innerHTML = data.pabrik3.subsistem2.jumlahpembayaran;
-              document.querySelector('#subsistem3-microbacteria').innerHTML = data.pabrik1.subsistem3.microbacteria;
-              document.querySelector('#subsistem3-kadarprotein').innerHTML = data.pabrik1.subsistem3.kadarprotein;
-              document.querySelector('#subsistem3-keasamandaging').innerHTML = data.pabrik1.subsistem3.keasamandaging;
-              document.querySelector('#subsistem3-etilen').innerHTML = data.pabrik2.subsistem3.etilen;
-              document.querySelector('#subsistem3-kadargula').innerHTML = data.pabrik2.subsistem3.kadargula;
-              document.querySelector('#subsistem3-kepadatan').innerHTML = data.pabrik2.subsistem3.kepadatan;
-              document.querySelector('#subsistem3-waiteridle').innerHTML = data.pabrik3.subsistem3.waiteridle;
-              document.querySelector('#subsistem3-okupansirestoran').innerHTML = data.pabrik3.subsistem3.okupansirestoran;
-              document.querySelector('#subsistem3-stokpiring').innerHTML = data.pabrik3.subsistem3.stokpiring;
+            charts = {};
+
+            function updateText(data) {
+                document.querySelector(
+                    "span#subsistem1-kadarproteinsusu"
+                ).innerHTML =
+                    data.pabrik1.subsistem1.kadarproteinsusu.toFixed(3);
+                document.querySelector("span#subsistem1-kekentalansusu").innerHTML =
+                    data.pabrik1.subsistem1.kekentalansusu.toFixed(3);
+                document.querySelector(
+                    "span#subsistem1-jumlahkuningtelur"
+                ).innerHTML =
+                    data.pabrik1.subsistem1.jumlahkuningtelur.toFixed(3);
+                document.querySelector("span#subsistem1-kekuninganpadi").innerHTML =
+                    data.pabrik2.subsistem1.kekuninganpadi.toFixed(3);
+                document.querySelector("span#subsistem1-kebulatanpadi").innerHTML =
+                    data.pabrik2.subsistem1.kebulatanpadi.toFixed(3);
+                document.querySelector(
+                    "span#subsistem1-kadarkarbohidrat"
+                ).innerHTML =
+                    data.pabrik2.subsistem1.kadarkarbohidrat.toFixed(3);
+                document.querySelector("span#subsistem1-suhu").innerHTML =
+                    data.pabrik3.subsistem1.suhu.toFixed(3);
+                document.querySelector("span#subsistem1-arahangin").innerHTML =
+                    data.pabrik3.subsistem1.arahangin.toFixed(3);
+                document.querySelector("span#subsistem1-curahhujan").innerHTML =
+                    data.pabrik3.subsistem1.curahhujan.toFixed(3);
+                document.querySelector(
+                    "span#subsistem2-kemerahandaging"
+                ).innerHTML =
+                    data.pabrik1.subsistem2.kemerahandaging.toFixed(3);
+                document.querySelector("span#subsistem2-kadarlemak").innerHTML =
+                    data.pabrik1.subsistem2.kadarlemak.toFixed(3);
+                document.querySelector("span#subsistem2-kadarair").innerHTML =
+                    data.pabrik1.subsistem2.kadarair.toFixed(3);
+                document.querySelector("span#subsistem2-kehijauan").innerHTML =
+                    data.pabrik2.subsistem2.kehijauan.toFixed(3);
+                document.querySelector("span#subsistem2-kadarklorofil").innerHTML =
+                    data.pabrik2.subsistem2.kadarklorofil.toFixed(3);
+                document.querySelector("span#subsistem2-amonia").innerHTML =
+                    data.pabrik2.subsistem2.amonia.toFixed(3);
+                document.querySelector("span#subsistem2-kasiridle").innerHTML =
+                    data.pabrik3.subsistem2.kasiridle.toFixed(3);
+                document.querySelector("span#subsistem2-ratepenjualan").innerHTML =
+                    data.pabrik3.subsistem2.ratepenjualan.toFixed(3);
+                document.querySelector(
+                    "span#subsistem2-jumlahpembayaran"
+                ).innerHTML =
+                    data.pabrik3.subsistem2.jumlahpembayaran.toFixed(3);
+                document.querySelector("span#subsistem3-microbacteria").innerHTML =
+                    data.pabrik1.subsistem3.microbacteria.toFixed(3);
+                document.querySelector("span#subsistem3-kadarprotein").innerHTML =
+                    data.pabrik1.subsistem3.kadarprotein.toFixed(3);
+                document.querySelector("span#subsistem3-keasamandaging").innerHTML =
+                    data.pabrik1.subsistem3.keasamandaging.toFixed(3);
+                document.querySelector("span#subsistem3-etilen").innerHTML =
+                    data.pabrik2.subsistem3.etilen.toFixed(3);
+                document.querySelector("span#subsistem3-kadargula").innerHTML =
+                    data.pabrik2.subsistem3.kadargula.toFixed(3);
+                document.querySelector("span#subsistem3-kepadatan").innerHTML =
+                    data.pabrik2.subsistem3.kepadatan.toFixed(3);
+                document.querySelector("span#subsistem3-waiteridle").innerHTML =
+                    data.pabrik3.subsistem3.waiteridle.toFixed(3);
+                document.querySelector(
+                    "span#subsistem3-okupansirestoran"
+                ).innerHTML =
+                    data.pabrik3.subsistem3.okupansirestoran.toFixed(3);
+                document.querySelector("span#subsistem3-stokpiring").innerHTML =
+                    data.pabrik3.subsistem3.stokpiring.toFixed(3);
+
+                document.querySelector("#ml_pabrik1_subsistem1").innerHTML = data.ml_pabrik1_subsistem1.toFixed(3);
+                document.querySelector("#ml_pabrik1_subsistem2").innerHTML = data.ml_pabrik1_subsistem2.toFixed(3);
+                document.querySelector("#ml_pabrik1_subsistem3").innerHTML = data.ml_pabrik1_subsistem3.toFixed(3);
+                document.querySelector("#ml_pabrik2_subsistem1").innerHTML = data.ml_pabrik2_subsistem1.toFixed(3);
+                document.querySelector("#ml_pabrik2_subsistem2").innerHTML = data.ml_pabrik2_subsistem2.toFixed(3);
+                document.querySelector("#ml_pabrik2_subsistem3").innerHTML = data.ml_pabrik2_subsistem3.toFixed(3);
+                document.querySelector("#ml_pabrik3_subsistem1").innerHTML = data.ml_pabrik3_subsistem1.toFixed(3);
+                document.querySelector("#ml_pabrik3_subsistem2").innerHTML = data.ml_pabrik3_subsistem2.toFixed(3);
+                document.querySelector("#ml_pabrik3_subsistem3").innerHTML = data.ml_pabrik3_subsistem3.toFixed(3);
+                document.querySelector("#ml_pabrik1").innerHTML = data.ml_pabrik1.toFixed(3);
+                document.querySelector("#ml_pabrik2").innerHTML = data.ml_pabrik2.toFixed(3);
+                document.querySelector("#ml_pabrik3").innerHTML = data.ml_pabrik3.toFixed(3);
+                document.querySelector("#ml_all").innerHTML = data.ml_all.toFixed(3);
+            }
+
+            function updateChart(data) {
+                charts["subsistem1-kadarproteinsusu"].updateSeries([
+                {
+                    data: [
+                        {
+                            x: new Date(new Date().getTime()),
+                            y: data.pabrik1.subsistem1.kadarproteinsusu,
+                        },
+                    ],
+                },
+                ])
+                
+                charts["subsistem1-kekentalansusu"].updateSeries([
+                    {
+                        data: [
+                            {
+                                x: new Date(new Date().getTime()),
+                                y: data.pabrik1.subsistem1.kekentalansusu,
+                            },
+                        ],
+                    },
+                ]);
+                charts["subsistem1-jumlahkuningtelur"].updateSeries([
+                    {
+                        data: [
+                            {
+                                x: new Date(new Date().getTime()),
+                                y: data.pabrik1.subsistem1.jumlahkuningtelur,
+                            },
+                        ],
+                    },
+                ]);
+            }
+
+            function initCharts() {
+                var options = {
+                    series: [
+                        {
+                            data: [],
+                        },
+                    ],
+                    chart: {
+                        height: 100,
+                        type: "line",
+                        animations: {
+                            enabled: true,
+                            easing: "linear",
+                            dynamicAnimation: {
+                                speed: 1000,
+                            },
+                        },
+                        toolbar: {
+                            show: false,
+                        },
+                        zoom: {
+                            enabled: false,
+                        },
+                    },
+                    dataLabels: {
+                        enabled: false,
+                    },
+                    stroke: {
+                        curve: "smooth",
+                    },
+                    title: {
+                        text: "Dynamic Updating Chart",
+                        align: "left",
+                    },
+                    markers: {
+                        size: 0,
+                    },
+                    xaxis: {
+                        type: "datetime",
+                    },
+                    yaxis: {
+                        max: 100,
+                    },
+                    legend: {
+                        show: false,
+                    },
+                };
+
+                charts["subsistem1-kadarproteinsusu"] = new ApexCharts(
+                    document.querySelector(
+                        "canvas#subsistem1-kadarproteinsusu"
+                    ),
+                    options
+                );
+                charts["subsistem1-kekentalansusu"] = new ApexCharts(
+                    document.querySelector("canvas#subsistem1-kekentalansusu"),
+                    options
+                );
+                charts["subsistem1-kuningtelur"] = new ApexCharts(
+                    document.querySelector("canvas#subsistem1-kuningtelur"),
+                    options
+                );
+                charts["subsistem2-kemerahandaging"] = new ApexCharts(
+                    document.querySelector("canvas#subsistem2-kemerahandaging"),
+                    options
+                );
+                charts["subsistem2-kadarlemak"] = new ApexCharts(
+                    document.querySelector("canvas#subsistem2-kadarlemak"),
+                    options
+                );
+                charts["subsistem2-kadarair"] = new ApexCharts(
+                    document.querySelector("canvas#subsistem2-kadarair"),
+                    options
+                );
+                charts["subsistem3-microbacteria"] = new ApexCharts(
+                    document.querySelector("canvas#subsistem3-microbacteria"),
+                    options
+                );
+                charts["subsistem3-kadarprotein"] = new ApexCharts(
+                    document.querySelector("canvas#subsistem3-kadarprotein"),
+                    options
+                );
+                charts["subsistem3-keasamandaging"] = new ApexCharts(
+                    document.querySelector("canvas#subsistem3-keasamandaging"),
+                    options
+                );
+                charts["subsistem1-kekuninganpadi"] = new ApexCharts(
+                    document.querySelector("canvas#subsistem1-kekuninganpadi"),
+                    options
+                );
+                charts["subsistem1-kebulatanpadi"] = new ApexCharts(
+                    document.querySelector("canvas#subsistem1-kebulatanpadi"),
+                    options
+                );
+                charts["subsistem1-kadarkarbohidrat"] = new ApexCharts(
+                    document.querySelector(
+                        "canvas#subsistem1-kadarkarbohidrat"
+                    ),
+                    options
+                );
+                charts["subsistem2-kehijauan"] = new ApexCharts(
+                    document.querySelector("canvas#subsistem2-kehijauan"),
+                    options
+                );
+                charts["subsistem2-kadarklorofil"] = new ApexCharts(
+                    document.querySelector("canvas#subsistem2-kadarklorofil"),
+                    options
+                );
+                charts["subsistem2-amonia"] = new ApexCharts(
+                    document.querySelector("canvas#subsistem2-amonia"),
+                    options
+                );
+                charts["subsistem3-etilen"] = new ApexCharts(
+                    document.querySelector("canvas#subsistem3-etilen"),
+                    options
+                );
+                charts["subsistem3-kadargula"] = new ApexCharts(
+                    document.querySelector("canvas#subsistem3-kadargula"),
+                    options
+                );
+                charts["subsistem3-kepadatan"] = new ApexCharts(
+                    document.querySelector("canvas#subsistem3-kepadatan"),
+                    options
+                );
+                charts["subsistem1-suhu"] = new ApexCharts(
+                    document.querySelector("canvas#subsistem1-suhu"),
+                    options
+                );
+                charts["subsistem1-arahangin"] = new ApexCharts(
+                    document.querySelector("canvas#subsistem1-arahangin"),
+                    options
+                );
+                charts["subsistem1-curahhujan"] = new ApexCharts(
+                    document.querySelector("canvas#subsistem1-curahhujan"),
+                    options
+                );
+                charts["subsistem2-kasiridle"] = new ApexCharts(
+                    document.querySelector("canvas#subsistem2-kasiridle"),
+                    options
+                );
+                charts["subsistem2-ratepenjualan"] = new ApexCharts(
+                    document.querySelector("canvas#subsistem2-ratepenjualan"),
+                    options
+                );
+                charts["subsistem2-jumlahpembayaran"] = new ApexCharts(
+                    document.querySelector(
+                        "canvas#subsistem2-jumlahpembayaran"
+                    ),
+                    options
+                );
+                charts["subsistem3-waiteridle"] = new ApexCharts(
+                    document.querySelector("canvas#subsistem3-waiteridle"),
+                    options
+                );
+                charts["subsistem3-okupansirestoran"] = new ApexCharts(
+                    document.querySelector(
+                        "canvas#subsistem3-okupansirestoran"
+                    ),
+                    options
+                );
+                charts["subsistem3-stokpiring"] = new ApexCharts(
+                    document.querySelector("canvas#subsistem3-stokpiring"),
+                    options
+                );
+               
+                for (let key in charts) {
+                    charts[key].render();
+                }
             }
 
             function getData() {
                 fetch(`http://${window.location.host}/api/sensor/`)
                     .then((res) => res.json())
-                    .then((data) => updateView(data));
+                    .then((data) => {
+                        updateText(data);
+                        // updateChart(data);
+                    });
             }
 
+            {% comment %} initCharts(); {% endcomment %}
             setInterval(getData, 1000);
         </script>
     </body>
 </html>
-
